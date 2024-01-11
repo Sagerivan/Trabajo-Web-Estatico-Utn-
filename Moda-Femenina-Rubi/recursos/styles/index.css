@@ -1,0 +1,663 @@
+:root{
+    --colorPri:rgba(239,184,16);
+    --colorSec:rgba(249, 175, 213, 0.8);
+    --colorTer:rgba(245, 40, 145, 0.8);
+}
+
+@font-face {
+    font-family:DancingScript-VariableFont_wght ;
+    src: url(../fuente/DancingScript-VariableFont_wght.ttf);
+}
+
+*{
+    font-family:"DancingScript-VariableFont_wght";
+    scroll-behavior: smooth;
+    
+}
+
+
+
+body{
+    margin: 0px;
+    background-color: var(--colorSec);
+}
+
+header{
+    
+    height: 100vh;
+    width: 100%;
+ 
+}
+
+#fondoPantalla{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+
+.tituloPrincipal{
+    
+    animation:  animacion2 3s infinite, animacion3 3s infinite;
+    border-radius: 48%;
+    height: 40px;
+    width: 300px;
+    text-align: center;
+    border: 2px solid black;
+    transition-duration: 500ms;
+    padding: 5px;
+    
+    
+}
+
+
+
+nav{
+    position: fixed;
+    top: 0;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+    z-index: 50;
+    background-color: white;
+}
+
+.nav-item{
+    text-decoration: none ;
+    list-style-type: none;
+    
+    font-weight: 500;
+    color: black;
+}
+
+.logoPrincipal{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 1px solid black;
+    transition-duration: 2s;
+}
+/*
+.logoPrincipal:active{
+    
+    transform: rotate(360deg);
+    border-radius: 50%;
+    margin-right:20px;
+    border: 1px solid black;
+}
+*/
+
+.volver{
+    margin-right: 100px;
+    color:white;
+}
+
+.primerBarra{
+    
+    display: flex;
+    height: 100px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+    z-index: 40;
+    
+}
+
+.imgPrimeraBarra{
+    position: fixed;
+    width: 100%;
+    height: 110px;
+    z-index: -5;
+    object-fit:cover;
+    margin-bottom: 10px;
+}
+
+.segundaBarra{
+    position: fixed;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    margin-top: 100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    z-index: 30;
+    box-shadow: 0px 5px 5px black;
+}
+
+.linkNav{
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    transition-duration: 400ms;
+}
+
+.active{
+    
+    border-radius: 45%;
+    box-shadow: 0px 5px 5px var(--colorTer);
+    padding-left: 5px;
+    padding-right:5px;
+   
+}
+
+.imagenPortada{
+    margin-top: 10vh;
+    object-fit:cover;
+    height: 90vh;
+    width: 100%; 
+    position: fixed;
+    z-index: -10;
+}
+
+.tituloPortada{
+    position: absolute;
+    z-index: 10;
+    display: flex;  
+    margin-top: 20%;
+    margin-left: 40%;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    opacity:0.7;
+}
+
+
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+.listaProductos{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 60vh;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
+   
+    
+}
+
+.imgSola{
+    height: 250px;
+    width: 200px;
+    border-radius: 50%;
+    border: 1px solid black;
+    
+}
+
+.hover{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition-duration:  500ms;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+   
+}
+
+.hover:hover{
+    margin-bottom: 20px;
+   padding-top: 5px;
+    color: var(--colorTer);  
+    box-shadow:-5px 5px 20px 20px black,  5px 5px 20px 20px black;
+    background-color: black;
+}
+
+
+
+
+aside{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorAside{
+    display: flex;
+	text-align: center;
+	align-items: center;
+    width: 60%;
+    height: 40vh;
+    background-color: white;
+    border-radius: 200px;
+    padding: 20px;
+    animation: animacion 4s infinite;
+    margin-top: 100px;
+    
+}
+
+.imgAside{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    padding-right: 5px;
+    
+}
+
+
+
+
+.seccionForm{
+    height: 90vh;
+	width: 100%;
+	text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+form{
+	display: flex;
+	flex-direction: column;
+	height: 80%;
+	width: 45%;
+	justify-content: center;
+	align-items: center;
+		
+}
+
+
+
+.tituloContacto{
+    font-size: large;
+    margin-top: 70px;
+}
+
+.tituloContacto2{
+    font-size: large;
+    margin-bottom: 70px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 35px;
+}
+
+.grupoContacto{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+	align-items: center;
+}
+
+.listaContacto{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+    justify-content: center;
+	align-items: center;
+}
+
+.listaItem{
+    margin: 20px ;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkContacto{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.imagenContacto{
+width: 30px;
+height: 30px;
+align-items: center;
+}
+
+input{
+	width: 50%;
+	border-radius: 10px;
+	padding: 5px;
+    border: 1px solid black;
+	
+}
+
+
+.submit{
+	margin-top: 20px;
+}
+
+textarea {
+	width: 50%;
+    height: 150px;
+    resize: none;
+	border-radius: 10px;
+	border: 1px solid black;
+    padding: 5px;
+}
+
+
+footer {
+    background-color: var(--colorTer);
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  #productos{
+    margin: 0;
+    padding-bottom: 2px;
+    
+  }
+
+  label, .linkContacto{
+    background-color: black;
+    color: white;
+    margin: 5px;
+    padding: 10px;
+
+    border-radius: 35px;
+  }
+
+
+
+  @keyframes animacion {
+    0% {
+        box-shadow: 10px 0px 20px var(--colorTer) inset;
+      }
+    25% {
+        box-shadow: 0px 10px 20px var(--colorTer) inset;
+      }
+    50% {
+        box-shadow: -10px 0px 20px var(--colorTer) inset;
+    }
+    75% {
+        box-shadow: 0px -10px 20px var(--colorTer) inset;
+    }
+    100% {
+        box-shadow: 10px 0px 20px var(--colorTer) inset;
+      }
+  }
+
+  @keyframes animacion2 {
+    0% {
+        
+      }
+    50% {
+        box-shadow: 5px 0px 10px 10px var(--colorSec), 0px 5px 10px 10px var(--colorSec),  -5px 0px 10px 10px var(--colorSec),  0px -5px 10px 10px var(--colorSec)  ;
+      }
+    100% {
+          
+    }
+   
+  }
+
+  @keyframes animacion3 {
+    0% {
+         background-color: var(--colorSec);
+    }
+    50% {
+        background-color: var(--colorTer) ;
+        color: white;
+      }
+      100% {
+        background-color: var(--colorSec);
+   }
+  }
+
+
+  @media (max-width:500px){
+    
+
+
+
+    
+    
+
+
+    
+    .logoPrincipal{
+        height:50px;
+        width: 50px;
+       margin-left: 20px;
+      margin-top: 5px;
+    }
+
+    .volver{
+      text-align: center;
+      width: 200px; 
+      margin-left:25%;
+      
+    }
+
+    
+    .primerBarra{
+    
+        display: flex;
+        height: 150px;
+        width: 360px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        z-index: 40;
+        
+    }
+
+    .imgPrimeraBarra{
+        position: fixed;
+        width: 100%;
+        height: 150px;
+        z-index: -5;
+        
+        
+    }
+
+    .segundaBarra{
+        position: fixed;
+        display: flex;
+        height: 70px;
+        width: 100%;
+        margin-top: 150px;
+        padding: 0%;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+        background-color: black;
+        z-index: 30;
+        box-shadow: 0px 5px 5px black;
+        font-size: 15px;
+    }
+    
+    .linkNav{
+      padding: 5px;
+    }
+
+  
+
+    a{
+        width: 100%;
+    }
+
+
+
+
+    .tituloPortada{
+        position: absolute;
+        z-index: 20;
+        display: flex;  
+        margin-top: 100%;
+        margin-left: 25%;
+        background-color: black;
+        color: white;
+        padding: 15px;
+        border-radius: 50%;
+        opacity:0.7;
+    }
+    
+    .imagenPortada{
+        
+        margin-top: 10vh;
+        height: 90vh;
+        width: 100%; 
+        box-shadow: 0px 5px 5px rgb(130, 85, 30);
+        object-fit: cover;
+    }
+
+    main{
+        width: 360px;
+    }
+
+    .hover{
+    
+       padding: 10px;
+       align-items: center;
+       justify-content: center;
+       
+    }
+
+    .listaProductos{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 60vh;
+        margin-top: 190px;
+       
+ text-align: center;
+        align-items: center;
+        
+margin-right:15%;
+    }
+    
+    .imgSola{
+        height: 100px;
+        width: 80px;
+        border-radius: 50%;
+        border: 1px solid black;
+        
+        
+    }
+
+   
+
+    .contenedorAside{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        width: 60%;
+        height: 30vh;
+        background-color: white;
+        border-radius: 200px;
+        padding: 10px 20px 190px 20px;
+        animation: animacion 4s infinite;
+        margin-top: 200px;
+        font-size: 14px;
+        
+    }
+
+    .imgAside{
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        
+        
+    }
+
+   form{
+    margin-top: 20px;
+   }
+
+    .grupoContacto{
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 12px;
+        margin-top: 110px;
+    }
+
+    .tituloContacto, .tituloContacto2{
+        font-size: 12px;
+    }
+    .tituloContacto{
+        width: 180px;
+        margin-top: 17px;
+        padding: 5px;
+    }
+
+    .tituloContacto2{
+        padding: 5px;
+        width: 100px;
+    }
+
+    .linkContacto{
+        padding-right: 80px;
+        padding-top: 10px;
+        align-items: center;
+        
+    }
+    .imagenContacto{
+        margin-left: 10px;
+      
+    }
+    textarea, input{
+        width: 100%;
+       
+        
+    }
+}
+
+
+@media (max-width:800px){
+
+    .contenedorAside{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        width: 60%;
+        height: 30vh;
+        background-color: white;
+        border-radius: 200px;
+        padding: 10px 20px 190px 20px;
+        animation: animacion 4s infinite;
+        margin-top: 200px;
+        font-size: 14px;
+        
+    }
+
+    .imgAside{
+        height: 110px;
+        width: 110px;
+        border-radius: 50%;
+        
+        
+    }
+
+}
